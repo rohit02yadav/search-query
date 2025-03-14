@@ -1,0 +1,4 @@
+com/learning/searchquery/SearchQueryApplication.class
+com/learning/searchquery/model/SearchResponse.class
+com/learning/searchquery/controllers/SearchController.class
+com/learning/searchquery/ServletInitializer.class

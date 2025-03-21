@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+            maven 'maven-installer'
+        }
     environment {
         REGISTRY = "yourdockerhubusername"
         IMAGE_NAME = "search-query"

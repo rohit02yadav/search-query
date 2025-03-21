@@ -18,8 +18,8 @@ pipeline {
         stage('Build with Maven') {
             steps {
                 script {
-                        container ('maven'){
-                                   sh 'mvn clean package -DskipTests'
+                        withMaven {
+                          sh 'mvn clean package -DskipTests'
                         }
                     // Build the project with Maven (skip tests if you want)
                 }

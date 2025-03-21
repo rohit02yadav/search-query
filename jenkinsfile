@@ -20,9 +20,9 @@ pipeline {
         stage('Build with Maven') {
             steps {
                 script {
-                       // withMaven {
-                          sh 'mvn clean package -DskipTests'
-                       // }
+                       withMaven(maven: 'maven-installer', options: '-B -DskipTests') {  // Maven build with options
+                                           sh 'mvn clean install'
+                       }
                     // Build the project with Maven (skip tests if you want)
                 }
             }
